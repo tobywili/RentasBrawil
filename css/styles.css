@@ -1,0 +1,89 @@
+/* RENTASBRAWIN - estilos principales */
+:root {
+  --ink: #151923;
+  --muted: #687080;
+  --gold: #f5a623;
+  --gold-dark: #d88708;
+  --paper: #f6f7f9;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: 'Montserrat', Arial, sans-serif; color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.site-header { position: sticky; top: 0; z-index: 10; background: rgba(17, 22, 32, .97); }
+.nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { color: white; font-size: 1.25rem; font-weight: 800; letter-spacing: .04em; }
+.brand span { color: var(--gold); }
+.nav-links { display: flex; gap: 28px; color: #e5e7eb; font-size: .9rem; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { padding: 11px 19px; border-radius: 7px; background: var(--gold); color: #171717; font-weight: 700; font-size: .88rem; }
+.hero { min-height: 620px; position: relative; display: flex; align-items: center; color: white; overflow: hidden; background: radial-gradient(circle at 78% 48%, #4b5360 0, #242b37 28%, #111620 66%); }
+.hero::after { content: "110"; position: absolute; right: 8%; bottom: -100px; color: rgba(255,255,255,.045); font-size: clamp(16rem, 38vw, 35rem); font-weight: 800; line-height: 1; }
+.hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(17,22,32,.95), rgba(17,22,32,.45)); }
+.hero-content { position: relative; z-index: 1; padding: 90px 0; }
+.eyebrow { color: var(--gold-dark); font-size: .75rem; font-weight: 800; letter-spacing: .18em; }
+.hero .eyebrow { color: var(--gold); }
+h1, h2, h3, p { margin-top: 0; }
+h1 { max-width: 760px; margin-bottom: 20px; font-size: clamp(2.8rem, 7vw, 5.4rem); line-height: 1.04; letter-spacing: -.055em; }
+h1 span { color: var(--gold); }
+.hero-copy { max-width: 560px; color: #d1d5db; font-size: 1.05rem; line-height: 1.8; }
+.hero-actions, .contact-buttons { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+.button { display: inline-flex; justify-content: center; align-items: center; min-height: 49px; padding: 0 22px; border-radius: 7px; font-weight: 700; font-size: .9rem; transition: transform .2s, background .2s; }
+.button:hover { transform: translateY(-2px); }
+.button-primary { background: var(--gold); color: #171717; }
+.button-primary:hover { background: #ffc04d; }
+.button-ghost { border: 1px solid rgba(255,255,255,.55); color: white; }
+.hero-note { margin-top: 24px; color: #aeb5c0; font-size: .8rem; }
+.section { padding-top: 94px; padding-bottom: 100px; }
+.section-heading { max-width: 650px; margin-bottom: 38px; }
+.section-heading h2, .requirements h2, .contact-inner h2 { margin-bottom: 13px; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.04em; }
+.section-heading > p:last-child, .requirements-copy { color: var(--muted); line-height: 1.8; }
+.motorcycle-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.motorcycle-card { overflow: hidden; border: 1px solid #e7e9ee; border-radius: 13px; background: white; box-shadow: 0 12px 35px rgba(20,25,35,.06); }
+.bike-photo { min-height: 245px; display: grid; place-items: center; background: linear-gradient(135deg, #d9dde4, #aeb6c3); color: #515967; font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
+.photo-two { background: linear-gradient(135deg, #c8cdd5, #929ba9); }
+.card-body { padding: 25px; }
+.tag { display: inline-block; padding: 6px 10px; border-radius: 4px; background: #fff1d8; color: #915900; font-size: .7rem; font-weight: 800; }
+.card-body h3 { margin: 14px 0 8px; font-size: 1.35rem; }
+.card-body p { min-height: 48px; color: var(--muted); font-size: .9rem; line-height: 1.7; }
+.text-link { color: #a76700; font-size: .88rem; font-weight: 800; }
+.text-link span { margin-left: 5px; }
+.requirements { padding: 90px 0; background: var(--paper); }
+.requirements-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+.requirements-copy { max-width: 450px; }
+.requirements-list { display: grid; gap: 25px; }
+.requirement { display: flex; gap: 18px; padding-bottom: 22px; border-bottom: 1px solid #dfe2e8; }
+.requirement > span { color: var(--gold-dark); font-size: 1rem; font-weight: 800; }
+.requirement h3 { margin-bottom: 7px; font-size: 1rem; }
+.requirement p { margin-bottom: 0; color: var(--muted); font-size: .88rem; line-height: 1.7; }
+.contact-section { padding: 95px 0; background: #171d28; color: white; text-align: center; }
+.contact-inner { max-width: 700px; }
+.contact-inner > p:not(.eyebrow):not(.contact-area) { color: #c5cad3; line-height: 1.8; }
+.contact-buttons { justify-content: center; }
+.button-light { background: white; color: #171d28; }
+.contact-area { margin-top: 28px; color: #aeb5c0; font-size: .85rem; }
+.footer { padding: 25px 0; background: #10141c; color: #aeb5c0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand-footer { font-size: 1rem; }
+.footer p { margin: 0; font-size: .75rem; }
+@media (max-width: 700px) {
+  .nav { min-height: 68px; }
+  .nav-links { display: none; }
+  .nav-cta { padding: 10px 14px; }
+  .hero { min-height: 570px; }
+  .hero-content { padding: 75px 0; }
+  .hero-copy { font-size: .95rem; }
+  .motorcycle-grid, .requirements-layout { grid-template-columns: 1fr; }
+  .section { padding-top: 70px; padding-bottom: 75px; }
+  .requirements { padding: 70px 0; }
+  .requirements-layout { gap: 35px; }
+  .contact-section { padding: 75px 0; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 420px) {
+  .container { width: min(100% - 28px, 1120px); }
+  .hero-actions, .contact-buttons { flex-direction: column; }
+  .button { width: 100%; }
+}
